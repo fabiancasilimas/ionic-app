@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>mizona Demo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-grid>
+      <ion-row>
+        <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+            <img src="assets/imgs/mizona.gif" alt="Logo de Mi Zona">
+                
+            <h2>Seguridad Ciudadana</h2>
+            <p>
+              Te permite crear denuncias para que Todos podamos contribuir y tener una cuidad más segura.
+            </p>
+            <p>
+              Bogotá Mi Casa, Bogotá Mi Zona.
+            </p>
+            <button ion-button>Iniciar sesión</button>
+            <button ion-button color="secondary">Registrarse</button>
+            <button ion-button color="danger">Denuncia</button>
+            <button ion-button color="dark" (click)="presentActionSheet()" class="button">Open Action Sheet</button>
+            <ion-list>
+                <button ion-item *ngFor="let item of items"
+                (click)="itemSelected(item)">
+                {{ item }}
+                </button>  
+            </ion-list>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>
